@@ -1,0 +1,41 @@
+.myHeader {
+    border: 50px outset rgb(255, 240, 108);
+    border-width: 50px;
+    background-color: rgb(251, 251, 155);
+    font-family: 'Patua One', cursive;
+    font-size: 30px;
+    text-align: center;
+    width: 40%;
+    margin: auto;
+  }
+.questions {
+    border: outset  rgb(255, 240, 108);
+    border-width: 5px;
+    background-color: rgb(251, 251, 155);
+    font-family: 'Patua One', cursive;
+    font-size: 30px;
+    text-align: center;
+    width: 40%;
+    margin:auto;
+    display: block;
+    padding-bottom:  40px;
+
+
+  }
+  footer {
+    font-family: 'Patua One', cursive;
+    font-size: 30px;
+    text-align: center;
+    width: 40%;
+    margin:auto;
+    display: block;
+    padding-bottom:  40px;
+
+
+  }
+  
+
+
+body {
+    background-color: rgb(240, 191, 253);
+  }
