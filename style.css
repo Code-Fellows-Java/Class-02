@@ -9,15 +9,12 @@
     text-shadow: 2px 2px 4px #000000;
     width: 40%;
     margin: auto;
+    padding-bottom: 30px;
   }
-  #nav {
+  .nav {
     font-family: 'Press Start 2P', cursive;
-    width: 40%;
-    margin:auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: block;
-    padding-bottom:  40px;
+    padding-bottom: 30px;
+   
   }
 .questions {
     border: outset  rgb(141, 95, 161);
@@ -29,13 +26,19 @@
     text-align: center;
     text-shadow: 2px 2px 4px #000000;
     width: 40%;
-    margin:auto;
+    margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
     display: block;
     padding-bottom:  40px;
+    padding-left: 30px;
+    padding-right: 20px;
 
 
+  }
+  .orderedList {
+    width: 75%;
+    margin: 0 auto;
   }
   footer {
     font-family: 'Press Start 2P', cursive;
@@ -45,8 +48,6 @@
     margin:auto;
     display: block;
     padding-bottom:  40px;
-
-
   }
   
 
