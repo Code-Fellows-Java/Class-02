@@ -9,9 +9,9 @@ let mathQuestion = [
 ];
 
 let questions = [
-  'What is my favorite color?',
-  'what is my favorite movie?',
-  'What is my favorite book?',
+  'Is my favorite color purple?',
+  'Is my favorite movie There will be blood?',
+  'Is my favorite book The Hobbit?',
   'What are some of my favorite video games?',
 ];
 
