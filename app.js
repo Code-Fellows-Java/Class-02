@@ -1,5 +1,6 @@
 'use strict';
 
+function x () {
 console.log('Lets do this.');
 const mathAnswer = 6
 let chances = 6;
@@ -71,9 +72,9 @@ for (let i = 0; i < 4; i++) {
     alert('Try again!');
   }
 }
+}
 
-
-
+x();
 
 // let user = prompt('Hey! What is your name?');
 // console.log(user);
