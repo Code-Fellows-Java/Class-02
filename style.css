@@ -1,20 +1,33 @@
 .myHeader {
-    border: 50px outset rgb(255, 240, 108);
+    border: 50px outset rgb(141, 95, 161);
     border-width: 50px;
-    background-color: rgb(251, 251, 155);
-    font-family: 'Patua One', cursive;
+    background-color: rgb(111, 209, 209);
+    color: whitesmoke;
+    font-family: 'Press Start 2P', cursive;
     font-size: 30px;
     text-align: center;
+    text-shadow: 2px 2px 4px #000000;
     width: 40%;
     margin: auto;
   }
+  #nav {
+    font-family: 'Press Start 2P', cursive;
+    width: 40%;
+    margin:auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    padding-bottom:  40px;
+  }
 .questions {
-    border: outset  rgb(255, 240, 108);
+    border: outset  rgb(141, 95, 161);
     border-width: 5px;
-    background-color: rgb(251, 251, 155);
-    font-family: 'Patua One', cursive;
+    background-color: rgb(141, 95, 161);
+    font-family: 'Press Start 2P', cursive;
     font-size: 30px;
+    color: aliceblue;
     text-align: center;
+    text-shadow: 2px 2px 4px #000000;
     width: 40%;
     margin:auto;
     margin-top: 20px;
@@ -25,7 +38,7 @@
 
   }
   footer {
-    font-family: 'Patua One', cursive;
+    font-family: 'Press Start 2P', cursive;
     font-size: 30px;
     text-align: center;
     width: 40%;
@@ -39,5 +52,9 @@
 
 
 body {
-    background-color: rgb(240, 191, 253);
+    background-color: rgb(219, 216, 220);
+    background-image: url(https://wallpaperaccess.com/full/882411.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
   }
