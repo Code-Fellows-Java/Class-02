@@ -1,76 +1,198 @@
 'use strict';
-
-console.log('Lets do this.');
-const mathAnswer = 6
 let chances = 6;
-
-let mathQuestion = [
-  'Can you guess a number between 1 and 10?',
-];
+let mathAnswer = 46;
+let mathChances = 5;
+let correctAnswers = 0;
 
 let questions = [
   'Is my favorite color purple?',
   'Is my favorite movie There will be blood?',
   'Is my favorite book The Hobbit?',
-  'What are some of my favorite video games?',
+  'Is Austria my favorite country to visit?',
+  'What are some of my favorite games?'
+];
+
+let mathQuestion = [
+  'Can you guess my favorite number?'
 ];
 
 let answers = [
-  'purple',
-  'there will be blood',
-  'the hobbit',
-  ['skyrim', 'dark souls', 'pubg', 'elden ring'],
+  ['Yes'],
+  ['Yes'],
+  ['Yes'],
+  ['Yes']
 ];
 
-for (let i = 0; i < questions.length; i++) {
-  let response = prompt(questions[i]);
+let gameAnswers = [
+  'skyrim',
+  'elden ring',
+  'dark souls',
+  'pubg'
+];
 
-  if (typeof(answers[i]) !== 'string') {
-    for (let j = 0; j < chances; j++) {
-      let correct = false;
-      for ( let eachAnswer of answers[i]) {
-        if (response.toLowerCase() === eachAnswer) {
-          correct = true;
-          break;
-        }
-      }
-      if (correct === false) {
-        alert('Guess again!');
-        chances-- ;
-        response = prompt(questions[3]);
-        // alert('Some of the options were skyrim, dark souls, elden ring, and pubg!')
+let value = playerName('Hello Traveller, I am ', 'Ian');
 
-      } else {
-        alert('You got it! The options were skyrim, dark souls, elden ring, and pubg!');
-        break;
-      }
+alert(value);
+
+let name = prompt('What do they call you?');
+
+alert('Pleased to meet you, ' + name);
+
+function playerName(string, name) {
+  let greeting = string + name;
+  return greeting;
+}
+
+function askQuestionsWithAnswers(q,a) {
+  let response = prompt(q);
+  let correct = false;
+  for (let answer of a ) {
+    if (answer.toLowerCase() === response.toLowerCase()) {
+      correct = true;
+      correctAnswers++;
     }
-    alert('Some of the options were skyrim, dark souls, elden ring, and pubg!');
+  }
+  if (correct === true) {
+    return 'You got it!';
+  }
+  else {
+    return 'Nope.';
   }
 }
 
+function gameQuestion(q,a) {
+  let correct = false;
+  if (chances === 0) {
+    alert('Out of chances... The options were skyrim, elden ring, dark souls, and pubg.');
+    return;
+  }
+  // Asking question
+  alert('You have ' + chances + ' chances left');
+  let response = prompt(q);
+  // Take answer, check the array of correct answers
+  for (let i = 0; i <= 3; i++) {
+  //if it is matching one, return good
+    if (response === a[i]) {
+      correct = true;
+    }
+  }
+  if (correct === true) {
+    alert('You got it! The options were skyrim, elden ring, dark souls, and pubg.');
+    correctAnswers;
+    return;
+  }
+  else {
+    chances --;
+    alert('Try again!');
+    gameQuestion(questions[4], gameAnswers);
+  }
+}
+
+// Call quetsions up to number 4
+for (let i =0; i < answers.length; i++) {
+  console.log(askQuestionsWithAnswers(questions[i], answers[i]));
+}
+
+// Call 5th question
+gameQuestion(questions[4], gameAnswers);
 
 for (let i = 0; i < 4; i++) {
   let response = prompt(mathQuestion);
   if (response == mathAnswer) {
-    alert('Wow you got it. Look at the big brain on Brad!')
+    alert('Wow you got it. Look at the big brain on Brad!');
+    correctAnswers++;
     break;
   } else if (response < mathAnswer) {
     alert('Too low!');
+    let response = prompt(mathQuestion);
+    mathChances--;
 
   }
   else if (response > mathAnswer) {
     alert('Too high!');
+    let response = prompt(mathQuestion);
+    mathChances--;
 
   }
-
-
-  else if (response.toLowerCase() === answers[i]) {
-    alert('Good Job!');
-  } else {
-    alert('Try again!');
-  }
+  alert('You got ' + correctAnswers + ' correct!' );
 }
+
+// 'use strict';
+
+// console.log('Lets do this.');
+// let name = prompt('What is your name, traveller?');
+// alert('Hello, ' + name + ' welcome to my site!');
+
+// let mathAnswer = 6
+// let chances = 6;
+
+// let mathQuestion = [
+//   'Can you guess a number between 1 and 10?',
+// ];
+
+// let questions = [
+//   'Is my favorite color purple?',
+//   'Is my favorite movie There will be blood?',
+//   'Is my favorite book The Hobbit?',
+//   'What are some of my favorite video games?',
+// ];
+
+// let answers = [
+//   'purple',
+//   'there will be blood',
+//   'the hobbit',
+//   ['skyrim', 'dark souls', 'pubg', 'elden ring'],
+// ];
+
+// for (let i = 0; i < questions.length; i++) {
+//   let response = prompt(questions[i]);
+
+//   if (typeof(answers[i]) !== 'string') {
+//     for (let j = 0; j < chances; j++) {
+//       let correct = false;
+//       for ( let eachAnswer of answers[i]) {
+//         if (response.toLowerCase() === eachAnswer) {
+//           correct = true;
+//           break;
+//         }
+//       }
+//       if (correct === false) {
+//         alert('Guess again!');
+//         chances-- ;
+//         response = prompt(questions[3]);
+//         // alert('Some of the options were skyrim, dark souls, elden ring, and pubg!')
+
+//       } else {
+//         alert('You got it! The options were skyrim, dark souls, elden ring, and pubg!');
+//         break;
+//       }
+//     }
+//     alert('Some of the options were skyrim, dark souls, elden ring, and pubg!');
+//   }
+// }
+
+
+// for (let i = 0; i < 4; i++) {
+//   let response = prompt(mathQuestion);
+//   if (response == mathAnswer) {
+//     alert('Wow you got it. Look at the big brain on Brad!')
+//     break;
+//   } else if (response < mathAnswer) {
+//     alert('Too low!');
+
+//   }
+//   else if (response > mathAnswer) {
+//     alert('Too high!');
+
+//   }
+
+
+//   else if (response.toLowerCase() === answers[i]) {
+//     alert('Good Job!');
+//   } else {
+//     alert('Try again!');
+//   }
+// }
 
 
 
