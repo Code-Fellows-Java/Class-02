@@ -11,6 +11,14 @@
     margin: auto;
     padding-bottom: 30px;
   }
+  body {
+    background-color: rgb(219, 216, 220);
+    background-image: url(https://wallpaperaccess.com/full/882411.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
   .nav {
     font-family: 'Press Start 2P', cursive;
     padding-bottom: 30px;
@@ -50,12 +58,3 @@
     padding-bottom:  40px;
   }
   
-
-
-body {
-    background-color: rgb(219, 216, 220);
-    background-image: url(https://wallpaperaccess.com/full/882411.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-  }
